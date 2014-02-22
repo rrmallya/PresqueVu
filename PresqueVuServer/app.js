@@ -47,10 +47,13 @@ http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 
 
- 
+var sqlite = require('sqlite');
+var db = sqlite.openDatabaseSync("presquevu.db");
+var assert = require("assert").ok;
 
-
-
+db.query("SELECT latitude, longitude FROM user_location where user=" + user, function (records) {
+  console.log(records[0].latitude);
+  console.log(records[0].longitude);
 });
 
 
