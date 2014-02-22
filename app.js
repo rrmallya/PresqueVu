@@ -36,7 +36,7 @@ app.get('/users', user.list);
 app.get('/hello.txt', function(req, res){
 	res.set({
   'Content-Type': 'text/plain',
-  'Access-Control-Allow-Origin': 'http://localhost:4567/*',
+  'Access-Control-Allow-Origin': 'http://localhost:4567/android/www/',
   'Content-Length': '123',
   'ETag': '12345'
 })
