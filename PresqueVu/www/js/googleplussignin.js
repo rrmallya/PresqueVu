@@ -89,7 +89,7 @@ var helper = (function() {
           $('#profile').append(profile.error);
           return;
         }
-        console.log(profile.displayName+" : "profile.id);
+     console.log(profile.displayName+" : "+profile.id);
         $('#profile').append(
             $('<p><img src=\"' + profile.image.url + '\"></p>'));
         $('#profile').append(
