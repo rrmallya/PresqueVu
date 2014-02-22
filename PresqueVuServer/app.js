@@ -57,3 +57,5 @@ db.query("SELECT latitude, longitude FROM user_location where user=" + user, fun
 });
 
 
+
+
