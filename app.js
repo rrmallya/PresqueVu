@@ -31,6 +31,26 @@ if ('development' == app.get('env')) {
 app.get('/', routes.index);
 app.get('/users', user.list);
 
+
+
+app.get('/hello.txt', function(req, res){
+	res.set({
+  'Content-Type': 'text/plain',
+  'Access-Control-Allow-Origin': '*',
+  'Content-Length': '123',
+  'ETag': '12345'
+})
+  res.send('Hello World');
+});
+
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
+
+
+ 
+
+
+
 });
+
+
