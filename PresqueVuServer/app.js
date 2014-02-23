@@ -57,7 +57,3 @@ db.query("SELECT latitude, longitude FROM user_location where user='jennifer'", 
   System.out.println("Output: latitude" + records[0].latitude);
   System.out.println("Output: longitude" + records[0].longitude);
 });
-
-
-
-
