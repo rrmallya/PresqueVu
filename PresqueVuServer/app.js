@@ -51,7 +51,6 @@ var sqlite = require('sqlite');
 var db = sqlite.openDatabaseSync("presquevu.db");
 var assert = require("assert").ok;
 
-
 db.query("SELECT latitude, longitude FROM user_location where user='jennifer'", function (records) {
   System.out.println("Query: SELECT latitude, longitude FROM user_location where user='jennifer'");
   System.out.println("Output: latitude" + records[0].latitude);
