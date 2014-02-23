@@ -46,14 +46,16 @@ app.get('/hello.txt', function(req, res){
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 
-
+System.out.println("Trying to read the database presquevu.db");
 var sqlite = require('sqlite');
 var db = sqlite.openDatabaseSync("presquevu.db");
 var assert = require("assert").ok;
 
-db.query("SELECT latitude, longitude FROM user_location where user=" + user, function (records) {
-  console.log(records[0].latitude);
-  console.log(records[0].longitude);
+
+db.query("SELECT latitude, longitude FROM user_location where user='jennifer'", function (records) {
+  System.out.println("Query: SELECT latitude, longitude FROM user_location where user='jennifer'");
+  System.out.println("Output: latitude" + records[0].latitude);
+  System.out.println("Output: longitude" + records[0].longitude);
 });
 
 
